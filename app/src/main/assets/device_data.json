@@ -1,0 +1,58 @@
+{
+  "devices": [
+    {
+      "Id": "1234",
+      "Type": "Sensor",
+      "Price": 20,
+      "Currency": "USD",
+      "imageUrl": "https://i.ebayimg.com/images/g/EvQAAOSw3cVeS-zE/s-l300.jpg",
+      "Title": "Sensor",
+      "Description": "A device that responds to a physical stimulus (such as heat, light, sound, pressure, magnetism, or a particular motion) and transmits a resulting impulse (as for measurement or operating a control."
+    },
+    {
+      "Id": "1235",
+      "Type": "Thermostat",
+      "Price": 25,
+      "Currency": "USD",
+      "imageUrl": "https://cdn.rona.ca/images/05225145b_L.jpg",
+      "Title": "Thermostat",
+      "Description": "A thermostat is an instrument allowing the temperature to be maintained within given limits by the use of a device which cuts off the supply of heat when the required temperature is exceeded and automatically restores the supply when the temperature falls below that required."
+    },
+    {
+      "Id": "1236",
+      "Type": "Lightbulb",
+      "Price": 12,
+      "Currency": "USD",
+      "imageUrl": "https://www.lightbulbwholesaler.com/images/Category/icon/609.jpg",
+      "Title": "Lightbulb",
+      "Description": "A device used to convert electricity into light, consisting of a source of illumination (e.g. an electric filament or one or more LEDs) enclosed within a transparent or translucent shell, typically having a rounded shape and designed to be fitted into a socket in a lamp."
+    },
+    {
+      "Id": "1237",
+      "Type": "Lightbulb",
+      "Price": 17,
+      "Currency": "USD",
+      "imageUrl": "https://cdn-cx-images.dynamite.myharmony.com/mh/ssv2/devices/philips-hue-glamour-v2.png",
+      "Title": "Smart Lightbulb",
+      "Description": "A smart bulb is an internet-capable LED light bulb that allows lighting to be customized, scheduled and controlled remotely. Smart bulbs are among the most immediately successful offerings in the growing category of home automation and Internet of Things (IoT) products."
+    },
+    {
+      "Id": "1238",
+      "Type": "Outlet",
+      "Price": 30,
+      "Currency": "USD",
+      "imageUrl": "https://homedepot.scene7.com/is/image/homedepotcanada/p_1001561318.jpg?wid=1000&hei=1000&op_sharpen=1",
+      "Title": "Smart Outlet",
+      "Description": "Smart plugs are a simple way to automate the wired devices in your home. To set it up, all you have to do is plug it into an outlet and then connect it to your Wi-Fi network by following the directions in the compatible app on your phone or tablet."
+    },
+    {
+      "Id": "1239",
+      "Type": "Outlet",
+      "Price": 13,
+      "Currency": "USD",
+      "imageUrl": "https://images.thdstatic.com/productImages/d432ce84-f92c-4030-8a34-55ab904edf70/svn/white-leviton-electrical-outlets-receptacles-r52-00689-00w-64_1000.jpg",
+      "Title": "Outlet",
+      "Description": "A place or opening through which something is let out : exit, vent. b : a means of release or satisfaction for an emotion or impulse sexual outlets. c : a medium of expression or publication. d : a publication or broadcast organization media outlets."
+    }
+  ]
+}

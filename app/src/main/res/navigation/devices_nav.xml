@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_device_list">
+
+    <fragment
+        android:id="@id/nav_device_list"
+        android:name="com.example.a1valet.ui.fragments.DeviceListFragment"
+        android:label="@string/device_list_fragment_head"
+        tools:layout="@layout/fragment_device_list">
+        <action
+            android:id="@+id/action_nav_device_list_to_deviceDetailsFragment"
+            app:destination="@id/deviceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_fav"
+        android:name="com.example.a1valet.ui.fragments.FavDeviceFragment"
+        android:label="@string/fav_fragment_head"
+        tools:layout="@layout/fragment_fav_device">
+        <action
+            android:id="@+id/action_nav_fav_device_list_to_deviceDetailsFragment"
+            app:destination="@id/deviceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceDetailsFragment"
+        android:name="com.example.a1valet.ui.fragments.DeviceDetailsFragment"
+        android:label="@string/device_details" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.a1valet.ui.fragments.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

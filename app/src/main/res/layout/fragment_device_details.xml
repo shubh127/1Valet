@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="device"
+            type="com.example.a1valet.data.models.Device" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_property_image"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_0dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1.33:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImage="@{device.imgURL}"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dimen_15dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dimen_15dp" />
+
+            <TextView
+                android:id="@+id/tv_device_title"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{device.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/cb_fav"
+                app:layout_constraintEnd_toStartOf="@id/cb_fav"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/iv_property_image"
+                tools:text="Title" />
+
+            <CheckBox
+                android:id="@+id/cb_fav"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                android:checked="@{device.fav}"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toEndOf="@id/tv_device_title"
+                app:layout_constraintTop_toTopOf="@id/tv_device_title" />
+
+            <TextView
+                android:id="@+id/tv_device_details"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:ellipsize="end"
+                android:justificationMode="inter_word"
+                android:text="@{device.description}"
+                android:textColor="@color/black_light_1"
+                android:textSize="@dimen/font_18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/cb_fav"
+                tools:text="This is demo description" />
+
+            <TextView
+                android:id="@+id/tv_device_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_25dp"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:text="@string/device_type"
+                android:textColor="@color/black_light_2"
+                android:textSize="@dimen/font_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tv_device_type"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_device_details" />
+
+            <TextView
+                android:id="@+id/tv_device_type"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:gravity="start"
+                android:text="@{device.type}"
+                android:textColor="@color/black_light_2"
+                android:textSize="@dimen/font_18sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toEndOf="@id/tv_device_type_title"
+                app:layout_constraintTop_toTopOf="@id/tv_device_type_title"
+                tools:text="Demo type" />
+
+            <TextView
+                android:id="@+id/tv_device_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_25dp"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:text="@string/price"
+                android:textColor="@color/black_light_2"
+                android:textSize="@dimen/font_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tv_device_price"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_device_type" />
+
+            <TextView
+                android:id="@+id/tv_device_price"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:gravity="start"
+                android:text="@{String.format(@string/price_currency, device.price,device.currency)}"
+                android:textColor="@color/black_light_2"
+                android:textSize="@dimen/font_18sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toEndOf="@id/tv_device_price_title"
+                app:layout_constraintTop_toTopOf="@id/tv_device_price_title"
+                tools:text="30 USD" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
